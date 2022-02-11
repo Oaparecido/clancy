@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: postgres:11
+    container_name: postgres-clancy
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-clancy:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: clancy
+      POSTGRES_USER: uranus
+      POSTGRES_PASSWORD: uranus
+
+volumes:
+  postgres-clancy:
